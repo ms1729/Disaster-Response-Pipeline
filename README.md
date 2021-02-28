@@ -1,4 +1,4 @@
-## DSND-Blog-Post
+## Disaster-Response-Pipeline
 
 ### Table of Contents
 
@@ -30,43 +30,36 @@ The project also includes a web app where an emergency worker can input a new me
 Below are a few screenshots of the web app.
 
 
-![Image of DRP_Image1](https://github.com/ms1729/DR/blob/main/DRProject_Image1.jpg)
+![Image of DRP_Image1](https://github.com/ms1729/Disaster-Response-Pipeline/blob/master/images/DRProject_Image1.jpg)
 
+![Image of DRP_Image2](https://github.com/ms1729/Disaster-Response-Pipeline/blob/master/images/DRProject_Image2.jpg)
 
-For this project, I was interestested in using Stack Overflow data from 2020 to better understand:
-
-From some of the questions that were asked in the 2020 survey, I would like to get a better understaning of the following questions:
-
-1. Which programming, scripting, and markup languages have the developers used in thir work over the past year?
-2. Does the company onboarding process have any link to job satisfaction of the developers?
-3. Based on the age of the developer, do they have any preference to the collaboration tool they use?
 
 ## File Descriptions <a name="files"></a>
 
 1. ETL Pipeline
 
-In a Python script, process_data.py, write a data cleaning pipeline that:
+In a Python script, `process_data.py`, write a data cleaning pipeline that:
 
-Loads the messages and categories datasets
-Merges the two datasets
-Cleans the data
-Stores it in a SQLite database
+- Loads the messages and categories datasets
+- Merges the two datasets
+- Cleans the data
+- Stores it in a SQLite database
 
 2. ML Pipeline
 
-In a Python script, train_classifier.py, write a machine learning pipeline that:
+In a Python script, `train_classifier.py`, write a machine learning pipeline that:
 
-Loads data from the SQLite database
-Splits the dataset into training and test sets
-Builds a text processing and machine learning pipeline
-Trains and tunes a model using GridSearchCV
-Outputs results on the test set
-Exports the final model as a pickle file
+- Loads data from the SQLite database
+- Splits the dataset into training and test sets
+- Builds a text processing and machine learning pipeline
+- Trains and tunes a model using GridSearchCV
+- Outputs results on the test set
+- Exports the final model as a pickle file
 
 3. Flask Web App
 
 The web app enables the user to enter a disaster message, and then view the categories of the message.
-
 
 ## Results<a name="results"></a>
 

@@ -45,6 +45,9 @@ def clean_data(df):
 
     # rename the columns of categories
     categories.columns = category_colnames
+    
+    #changing related column values to make the data in the column binary - 0 or 1
+    categories.loc[categories['related'] == 'related-2', 'related'] = 'related-1'
 
     # convert category values to just numbers 0 or 1.
     for column in categories:
@@ -74,7 +77,7 @@ def save_data(df, database_filename):
         database_filename (str): The file name of the database
     """
     engine = create_engine('sqlite:///{}'.format(database_filename))
-    df.to_sql('tb_disaster_messages', engine, index=False)
+    df.to_sql('tb_disaster_messages', engine, if_exists='replace', index=False)
     
     
 def main():
